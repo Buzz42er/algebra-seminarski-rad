@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.messages-div::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.messages-div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.messages-div::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 35%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.474);
+  border-radius: 4px;
+}
+
+.messages-div::scrollbar {
+  width: 1em;
+}
+ 
+.messages-div::scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.messages-div::scrollbar-thumb {
+  background-color: hsl(0, 0%, 35%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.474);
+  border-radius: 4px;
+}
