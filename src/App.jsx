@@ -1,10 +1,9 @@
 import './App.css';
-import ChatRoom from './components/ChatRoom';
-import NavListItem from './components/NavListItem';
 import { Component } from 'react';
 import Messages from './components/Messages';
 import Input from './components/Input';
 
+// random name generator
 function randomName() {
   const adjectives = [
     "autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark",
@@ -28,11 +27,15 @@ function randomName() {
     "wood", "dream", "cherry", "tree", "fog", "frost", "voice", "paper", "frog",
     "smoke", "star"
   ];
+  // gets first array and by math.floor chooses random number from that array's length by multiplying it with it
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  // does the same thing but with second array
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  // gets choosen element from first array and adds it to choosen element from second array
   return adjective + noun;
 }
 
+// random color generator
 function randomColor() {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
@@ -72,6 +75,7 @@ class App extends Component {
 render(){
   return (
     <div className="App">
+      {/* header-------------------------------------------------------------------------------------- */}
       <header>
         <section className='logo-section'>
           {/* logo */}
@@ -86,10 +90,10 @@ render(){
             </nav>
           </section>   
       </header>
+      {/* main ----------------------------------------------------------------------------------------*/}
       <main>
         <section className='chat-rooms-section'>
           {/* avalible chat rooms */}
-          <ChatRoom/>
         </section>
         <section className='chat-section'>
           {/* current chat */}
@@ -108,6 +112,7 @@ render(){
           </div>
         </section>
       </main>
+      {/* footer --------------------------------------------------------------------------------------------*/}
       <footer>
         <p>Made by Jure Ereš</p>
       </footer>

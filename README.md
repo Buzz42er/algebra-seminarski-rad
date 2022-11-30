@@ -1,73 +1,24 @@
-# Getting Started with Create React App
+This is README for Algebra seminarski rad.
+Here I will record my process and this will be documentation for the chat App that is Seminarski rad.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- you need to have installed -
+  _ node.js
+  _ some text editor
+  _ git(not nessesery but I would recomend)
+  _ git bash
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
+- 1.  setup -
+  - find some place where you want to hold your project
+  - create folder that will be called something in context of "chat app"
+  - get in vsc, or text editor of your choosing
+  - find and open folder that you have created
+  - go to terminal, or node console if you prefer so
+  - navigate to your folder(if you are in vsc it will do that automaticlly if you have opened that folder that you created)
+  - type in **_ npx react-create-app . _** (just stuff between \*\*\*(stars), also for every other time you see this kind of writing)
+    - a bit of context: - npx is one of the commands of NPM(Node Package Manager) - create-react-app is command that you call when you want to call and create everything you need to have react in that foleder - dot or spot on the end is important, that lets your npx know that it needs to create everything inside that folder that you are in
+      \*\*\* if you are not in that folder that you want to create your react app, insted of dot, you should tipe down eather just a name to create new folder inside the one you already are or make a path to folder you wanna create your app in
+  - wait for your app to be installed
+  - go to src
+  - create new folder called **_components_**
+  - inside of **_components_** create new **.jsx** file and name it **_Input.jsx_**
+  - and, in same folder, same type of file, create **_Messages.jsx_**
