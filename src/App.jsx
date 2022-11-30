@@ -1,8 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import ChatRoom from './components/ChatRoom';
-import RecivedMessage from './components/RecivedMessage';
-import SentMessage from './components/SentMessage';
 import NavListItem from './components/NavListItem';
 import { Component } from 'react';
 import Messages from './components/Messages';
@@ -78,12 +75,13 @@ render(){
       <header>
         <section className='logo-section'>
           {/* logo */}
+          <img src="2i.svg" alt="" width={40} height={40} className="logo"/>
         </section>
         <section className='nav-section'>
           {/* nav */}
           	<nav>
           	  <ul>
-          	    <NavListItem/>
+          	    {/* <NavListItem/> */}
           	  </ul>
             </nav>
           </section>   
@@ -111,7 +109,7 @@ render(){
         </section>
       </main>
       <footer>
-        <p>Made and perfected by Jure Ereš and Royal Blood</p>
+        <p>Made by Jure Ereš</p>
       </footer>
     </div>
   );

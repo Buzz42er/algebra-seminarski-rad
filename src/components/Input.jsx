@@ -29,7 +29,7 @@ class Input extends Component {
             autoFocus= {true}
           />
           <button>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               send
             </span>
           </button>

@@ -19,7 +19,7 @@ class Messages extends Component {
     const {messages} = this.props;
     return (
       <ul className="Messages-list">
-        {messages.map(m => <li key={m} className="nikolafartmen">{this.renderMessage(m)}</li> )}
+        {messages.map(m => <li key={m} className="classLocator">{this.renderMessage(m)}</li> )}
         <div style={{ float:"left", clear: "both" }}
              ref={(el) => { this.messagesEnd = el; }}>
         </div>
