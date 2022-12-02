@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/algebra-zavrsni-ispit/static/css/main.1ef7508f.css",
+    "main.js": "/algebra-zavrsni-ispit/static/js/main.5d09ff9e.js",
+    "static/media/wp6988787.png": "/algebra-zavrsni-ispit/static/media/wp6988787.8cbc68b385c3a89bcd26.png",
+    "index.html": "/algebra-zavrsni-ispit/index.html",
+    "main.1ef7508f.css.map": "/algebra-zavrsni-ispit/static/css/main.1ef7508f.css.map",
+    "main.5d09ff9e.js.map": "/algebra-zavrsni-ispit/static/js/main.5d09ff9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ef7508f.css",
+    "static/js/main.5d09ff9e.js"
+  ]
+}
