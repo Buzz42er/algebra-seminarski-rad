@@ -1,9 +1,8 @@
 import './App.css';
 import { Component } from 'react';
-import Messages from './components/Messages';
-import Input from './components/Input';
+import MessageBubbles from './components/MessageBubbles';
+import InputField from './components/InputField';
 
-// random name generator
 function randomName() {
   const adjectives = [
     "autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark",
@@ -27,22 +26,17 @@ function randomName() {
     "wood", "dream", "cherry", "tree", "fog", "frost", "voice", "paper", "frog",
     "smoke", "star"
   ];
-  // gets first array and by math.floor chooses random number from that array's length by multiplying it with it
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-  // does the same thing but with second array
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
-  // gets choosen element from first array and adds it to choosen element from second array
   return adjective + noun;
 }
 
-// random color generator
 function randomColor() {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
 
-
-class App extends Component {
+class ChatApp extends Component {
   state = {
     messages: [],
     member: {
@@ -50,24 +44,37 @@ class App extends Component {
       color: randomColor(),
     }
   }
-
+  // constructor is like a main function in class, that does most of hevy lifting
   constructor() {
+    // it contains super, that is a methode of sorts that can help us call functions or props 
     super();
+    // here is our api call where we are connecting, with a KEY, Scaledrone API and our app
     this.drone = new window.Scaledrone("KRxTFNfTQOZwor7e", {
+      // declaring member so that we can connect and fill state, and it's props with data that we'll pull form scaledrone
       data: this.state.member
     });
+    // connecting to scaledrone
     this.drone.on('open', error => {
       if (error) {
+        // if call fails write error to console
         return console.error(error);
       }
+      // when on, filling user info in state prop memeber
       const member = {...this.state.member};
+      // id-ing the memeber, with id provided by scaledrone
       member.id = this.drone.clientId;
+      // setting state of member, like a variable, but with a methode, will render it later by calling it
       this.setState({member});
     });
+    // declaring room as methode for subscribing to chatroom
     const room = this.drone.subscribe("observable-room");
+    // connecting to room
     room.on('data', (data, member) => {
+      // filling message to object state's prop messages
       const messages = this.state.messages;
+      // messages is object that we can set data to, and package it so that we know which user sent it
       messages.push({member, text: data});
+      // declering messages so that we can call it later and render it
       this.setState({messages});
     });
   }
@@ -99,14 +106,14 @@ render(){
           {/* current chat */}
           <div className='messages-div'>
             {/* message area */}
-            <Messages
+            <MessageBubbles
               messages={this.state.messages}
               currentMember={this.state.member}
             />
           </div>
           <div className='input-div'>
             {/* input area */}
-            <Input
+            <InputField
               onSendMessage={this.onSendMessage}
             />
           </div>
@@ -120,6 +127,7 @@ render(){
   );
 }
 
+// mount message to room, or publish as methode is called
 onSendMessage = (message) => {
   this.drone.publish({
     room: "observable-room",
@@ -129,4 +137,4 @@ onSendMessage = (message) => {
 
 }
 
-export default App;
+export default ChatApp;

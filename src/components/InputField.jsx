@@ -1,7 +1,7 @@
 import {Component} from "react";
 import React from "react";
 
-class Input extends Component {
+class InputField extends Component {
   state = {
     text: ""
   }
@@ -39,4 +39,4 @@ class Input extends Component {
   }
 }
 
-export default Input;
+export default InputField;

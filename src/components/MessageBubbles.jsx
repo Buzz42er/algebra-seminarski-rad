@@ -1,7 +1,7 @@
 import {Component} from "react";
 import React from "react";
 
-class Messages extends Component {
+class MessageBubbles extends Component {
   
   scrollToBottom = () => {
     this.messagesEnd.scrollIntoView({ behavior: "smooth" });
@@ -19,7 +19,7 @@ class Messages extends Component {
     const {messages} = this.props;
     return (
       <ul className="Messages-list">
-        {messages.map(m => <li key={m} className="classLocator">{this.renderMessage(m)}</li> )}
+        {messages.map((m, i) => <li key={i} className="classLocator">{this.renderMessage(m)}</li> )}
         <div style={{ float:"left", clear: "both" }}
              ref={(el) => { this.messagesEnd = el; }}>
         </div>
@@ -50,4 +50,4 @@ class Messages extends Component {
   }
 }
 
-export default Messages;
+export default MessageBubbles;
