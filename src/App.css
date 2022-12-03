@@ -144,6 +144,7 @@ main {
 .Message-content > .username {
   display: block;
   color: rgb(204, 204, 204);
+  font-weight: 900;
   font-size: 14px;
   padding-bottom: 4px;
 }
@@ -208,4 +209,32 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.727);
+}
+
+
+@media screen and (max-width: 700px) {
+
+  header {
+    height: 10vh;
+  }
+
+  .messages-div {
+    overflow-y: scroll;
+    padding-top: 20px;
+  }
+
+  .chat-rooms-section {
+    display: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  footer {
+    display: none;
+  }
 }

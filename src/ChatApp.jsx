@@ -2,6 +2,7 @@ import './App.css';
 import { Component } from 'react';
 import MessageBubbles from './components/MessageBubbles';
 import InputField from './components/InputField';
+import logo from  "./2i.svg";
 
 function randomName() {
   const adjectives = [
@@ -72,7 +73,7 @@ render(){
       <header>
         <section className='logo-section'>
           {/* logo */}
-          <img src="2i.svg" alt="" width={40} height={40} className="logo"/>
+          <img src={logo} alt="" width={40} height={40} className="logo"/>
         </section>
         <section className='nav-section'>
           {/* nav */}
